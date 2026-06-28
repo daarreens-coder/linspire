@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>澜舍酒店设计顾问 | LANSHE Hospitality Design</title>
-    <meta name="description" content="澜舍酒店设计顾问 - 专注于高端酒店、精品民宿、度假村的全案设计咨询，提供从概念规划到落地执行的一站式服务。">
+    <title>骊泊设计顾问 | LINSPIRE Hospitality Design</title>
+    <meta name="description" content="骊泊设计顾问 — 专注高端酒店、精品民宿、度假村的全案设计咨询，提供从概念规划到落地执行的一站式服务。">
     <style>
         :root {
             --bg-primary: #0d0d0d;
@@ -52,7 +52,6 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 6px;
         }
@@ -67,7 +66,6 @@
             background: var(--gold-dark);
         }
 
-        /* Selection */
         ::selection {
             background: var(--gold);
             color: #000;
@@ -109,35 +107,15 @@
             text-decoration: none;
             z-index: 1001;
         }
-        .nav-logo .logo-icon {
-            width: 40px;
-            height: 40px;
-            border: 2px solid var(--gold);
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-display);
-            font-size: 20px;
-            color: var(--gold);
-            font-weight: bold;
-            transition: all 0.4s var(--transition-smooth);
-            flex-shrink: 0;
+        /* Logo图片样式 */
+        .logo-img {
+            height: 42px;
+            width: auto;
+            display: block;
+            transition: opacity 0.3s;
         }
-        .nav-logo:hover .logo-icon {
-            background: var(--gold);
-            color: #000;
-        }
-        .nav-logo .logo-text {
-            font-family: var(--font-display);
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: var(--white);
-            letter-spacing: 0.03em;
-            white-space: nowrap;
-        }
-        .nav-logo .logo-text span {
-            color: var(--gold);
+        .nav-logo:hover .logo-img {
+            opacity: 0.85;
         }
         .nav-links {
             display: flex;
@@ -661,120 +639,6 @@
             aspect-ratio: 21/9;
         }
 
-        /* ============ PROCESS ============ */
-        .process-steps {
-            display: flex;
-            gap: 0;
-            position: relative;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        .process-steps::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 8%;
-            right: 8%;
-            height: 1px;
-            background: var(--border-subtle);
-            z-index: 0;
-        }
-        .process-step {
-            flex: 1;
-            min-width: 160px;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-            padding: 0 10px;
-        }
-        .process-step .step-number {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--bg-card);
-            border: 2px solid var(--border-subtle);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--font-display);
-            font-size: 1.6rem;
-            color: var(--gold);
-            transition: all 0.4s var(--transition-smooth);
-        }
-        .process-step:hover .step-number {
-            border-color: var(--gold);
-            background: var(--bg-card-hover);
-            box-shadow: 0 0 40px rgba(200, 164, 92, 0.15);
-            transform: scale(1.08);
-        }
-        .process-step h5 {
-            font-size: 1rem;
-            color: var(--white);
-            font-weight: 600;
-            margin-bottom: 6px;
-        }
-        .process-step p {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-        }
-
-        /* ============ TESTIMONIALS ============ */
-        .testimonials-wrapper {
-            max-width: 750px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-        }
-        .testimonial-quote {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-style: italic;
-            color: var(--text-primary);
-            line-height: 1.7;
-            margin-bottom: 28px;
-            letter-spacing: 0.02em;
-        }
-        .testimonial-quote::before {
-            content: '"';
-            font-size: 5rem;
-            color: var(--gold);
-            display: block;
-            line-height: 1;
-            margin-bottom: -10px;
-            opacity: 0.6;
-            font-family: var(--font-display);
-        }
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--white);
-            font-size: 1rem;
-        }
-        .testimonial-role {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-        .testimonial-dots {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 28px;
-        }
-        .testimonial-dot {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--border-subtle);
-            cursor: pointer;
-            transition: all 0.3s;
-            border: none;
-        }
-        .testimonial-dot.active {
-            background: var(--gold);
-            width: 28px;
-            border-radius: 10px;
-        }
-
         /* ============ CTA BANNER ============ */
         .cta-banner {
             background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 50%, #1a1a1a 100%);
@@ -932,16 +796,6 @@
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            .process-steps::before {
-                display: none;
-            }
-            .process-steps {
-                gap: 24px;
-            }
-            .process-step {
-                flex: 0 0 calc(50% - 12px);
-                min-width: 140px;
-            }
         }
         @media (max-width: 768px) {
             .nav-links {
@@ -982,9 +836,6 @@
             .about-stat .number {
                 font-size: 2rem;
             }
-            .process-step {
-                flex: 0 0 100%;
-            }
             .section-header h2 {
                 font-size: 1.6rem;
             }
@@ -1015,9 +866,6 @@
                 align-items: center;
                 gap: 16px;
             }
-            .testimonial-quote {
-                font-size: 1.2rem;
-            }
         }
     </style>
 </head>
@@ -1027,15 +875,14 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="#" class="nav-logo">
-                <div class="logo-icon">澜</div>
-                <span class="logo-text">澜舍<span>设计</span></span>
+                <!-- 替换logo：将下方 src="logo.png" 改为你自己的图片路径 -->
+                <img src="logo.png" alt="骊泊设计顾问" class="logo-img">
             </a>
             <ul class="nav-links">
                 <li><a href="#home" class="active">首页</a></li>
                 <li><a href="#about">关于我们</a></li>
                 <li><a href="#services">服务领域</a></li>
                 <li><a href="#projects">精选案例</a></li>
-                <li><a href="#process">工作流程</a></li>
                 <li><a href="#contact" class="nav-cta">预约咨询</a></li>
             </ul>
             <button class="hamburger" id="hamburger" aria-label="菜单">
@@ -1051,7 +898,6 @@
         <li><a href="#about" data-mobile-link>关于我们</a></li>
         <li><a href="#services" data-mobile-link>服务领域</a></li>
         <li><a href="#projects" data-mobile-link>精选案例</a></li>
-        <li><a href="#process" data-mobile-link>工作流程</a></li>
         <li><a href="#contact" data-mobile-link style="color:#c8a45c;">预约咨询</a></li>
     </ul>
 
@@ -1062,7 +908,7 @@
         <div class="hero-content">
             <span class="hero-tag">Luxury Hospitality Design</span>
             <h1>为每一间酒店<br>注入<em>灵魂与温度</em></h1>
-            <p>澜舍设计 — 深耕高端酒店领域十五年，以国际化视野与东方美学，为全球顶级酒店品牌提供从概念到落成的全案设计顾问服务。</p>
+            <p>骊泊设计顾问 — 以国际化视野与东方美学，为高端酒店品牌提供从概念到落成的全案设计服务。</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-primary">开启项目合作</a>
                 <a href="#projects" class="btn btn-outline">浏览设计案例</a>
@@ -1082,15 +928,15 @@
                     <div class="about-image-placeholder">
                         <div class="arch-element arch-1"></div>
                         <div class="arch-element arch-2"></div>
-                        <div class="arch-center">L</div>
+                        <div class="arch-center">骊</div>
                     </div>
                     <div class="about-image-accent"></div>
                 </div>
                 <div class="about-content">
-                    <span class="section-tag">About LANSHE</span>
+                    <span class="section-tag">About LINSPIRE</span>
                     <h3>以设计重塑<span class="highlight">旅居体验</span></h3>
-                    <p>澜舍酒店设计顾问成立于2010年，总部位于上海，在东京、米兰设有联合工作室。我们是一支由资深建筑师、室内设计师、灯光顾问及品牌策略师组成的跨学科团队。</p>
-                    <p>我们相信，一间真正伟大的酒店，不仅是建筑与装饰的集合，更是情感与记忆的容器。从全球连锁五星级酒店到隐于山野的精品民宿，我们始终坚持"在地文化 × 当代设计"的核心理念，让每一个空间都讲述独一无二的故事。</p>
+                    <p>骊泊设计顾问成立于2010年，总部位于上海，是一支由资深建筑师、室内设计师、灯光顾问及品牌策略师组成的跨学科团队。</p>
+                    <p>我们相信，一间真正伟大的酒店，不仅是建筑与装饰的集合，更是情感与记忆的容器。从全球连锁五星级酒店到隐于山野的精品民宿，我们始终坚持“在地文化 × 当代设计”的核心理念，让每一个空间都讲述独一无二的故事。</p>
                     <div class="about-stats">
                         <div class="about-stat">
                             <span class="number">15+</span>
@@ -1204,76 +1050,14 @@
         </div>
     </section>
 
-    <!-- ==================== PROCESS ==================== -->
-    <section id="process" class="bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Workflow</span>
-                <h2>严谨高效的工作流程</h2>
-                <div class="divider"></div>
-                <p>经过百余项目的沉淀，我们建立了标准化与创意并重的工作体系。</p>
-            </div>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">01</div>
-                    <h5>需求沟通</h5>
-                    <p>深入了解项目愿景、品牌调性与运营目标，明确设计方向。</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">02</div>
-                    <h5>概念提案</h5>
-                    <p>提炼核心创意，输出多版概念方案，与客户深度碰撞。</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">03</div>
-                    <h5>方案深化</h5>
-                    <p>空间深化、材料确认、灯光模拟，形成完整设计文件。</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">04</div>
-                    <h5>施工配合</h5>
-                    <p>全程现场督导，把控品质与进度，确保设计100%还原。</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">05</div>
-                    <h5>交付运营</h5>
-                    <p>软装摆场、灯光调试、运营培训，助力完美开业。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== TESTIMONIALS ==================== -->
-    <section id="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Testimonials</span>
-                <h2>客户心声</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="testimonials-wrapper">
-                <p class="testimonial-quote" id="testimonialText">
-                    澜舍团队不仅深刻理解了我们品牌的精神内核，更以超乎预期的创造力将其转化为令人惊叹的空间体验。酒店开业后客户满意度持续领先，这离不开他们在设计阶段的精准把控与全程投入。
-                </p>
-                <p class="testimonial-author" id="testimonialAuthor">陈志远</p>
-                <p class="testimonial-role" id="testimonialRole">璞隐酒店集团 · 首席执行官</p>
-                <div class="testimonial-dots" id="testimonialDots">
-                    <button class="testimonial-dot active" data-index="0" aria-label="评价1"></button>
-                    <button class="testimonial-dot" data-index="1" aria-label="评价2"></button>
-                    <button class="testimonial-dot" data-index="2" aria-label="评价3"></button>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- ==================== CTA BANNER ==================== -->
     <section class="cta-banner" id="contact">
         <div class="container">
             <h2>让您的酒店成为令人难忘的目的地</h2>
             <p>无论是新建项目还是改造升级，我们都期待与您展开深度对话。</p>
-            <a href="mailto:hello@lanshe-design.com" class="btn btn-primary">预约免费初步咨询</a>
+            <a href="mailto:hello@linspire-design.com" class="btn btn-primary">预约免费初步咨询</a>
             <p style="margin-top:18px;font-size:0.85rem;color:var(--text-muted);">
-                或致电：<strong style="color:var(--gold);">+86 21-6288-XXXX</strong> ｜ 邮箱：<strong style="color:var(--gold);">hello@lanshe-design.com</strong>
+                或致电：<strong style="color:var(--gold);">+86 21-6288-XXXX</strong> ｜ 邮箱：<strong style="color:var(--gold);">hello@linspire-design.com</strong>
             </p>
         </div>
     </section>
@@ -1283,8 +1067,8 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <div class="logo-icon">澜</div>
-                    <p>澜舍酒店设计顾问 — 以国际化设计语言诠释东方待客之道，为全球酒店业主提供卓越的设计解决方案。</p>
+                    <div class="logo-icon">骊</div>
+                    <p>骊泊设计顾问 — 以国际化设计语言诠释东方待客之道，为全球酒店业主提供卓越的设计解决方案。</p>
                 </div>
                 <div>
                     <h6>服务领域</h6>
@@ -1300,7 +1084,6 @@
                     <ul>
                         <li><a href="#about">关于我们</a></li>
                         <li><a href="#projects">精选案例</a></li>
-                        <li><a href="#process">工作流程</a></li>
                         <li><a href="#contact">联系我们</a></li>
                     </ul>
                 </div>
@@ -1309,13 +1092,13 @@
                     <ul>
                         <li><a href="#">上海市静安区南京西路XXXX号</a></li>
                         <li><a href="#">+86 21-6288-XXXX</a></li>
-                        <li><a href="#">hello@lanshe-design.com</a></li>
-                        <li><a href="#">微信公众号：澜舍设计</a></li>
+                        <li><a href="#">hello@linspire-design.com</a></li>
+                        <li><a href="#">微信公众号：骊泊设计顾问</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <span>&copy; 2026 澜舍酒店设计顾问有限公司. All rights reserved.</span>
+                <span>&copy; 2026 骊泊设计顾问有限公司. All rights reserved.</span>
                 <span>
                     <a href="#">隐私政策</a> · <a href="#">条款与条件</a> · <a href="#">京ICP备XXXXXXXX号</a>
                 </span>
@@ -1326,44 +1109,19 @@
     <!-- ==================== SCRIPTS ==================== -->
     <script>
         (function() {
-            // --- DOM Elements ---
             const navbar = document.getElementById('navbar');
             const hamburger = document.getElementById('hamburger');
             const mobileMenu = document.getElementById('mobileMenu');
             const mobileOverlay = document.getElementById('mobileOverlay');
             const mobileLinks = document.querySelectorAll('[data-mobile-link]');
             const navLinksAll = document.querySelectorAll('.nav-links a');
-            const testimonialText = document.getElementById('testimonialText');
-            const testimonialAuthor = document.getElementById('testimonialAuthor');
-            const testimonialRole = document.getElementById('testimonialRole');
-            const testimonialDots = document.getElementById('testimonialDots');
 
-            // --- Testimonials Data ---
-            const testimonials = [{
-                text: '澜舍团队不仅深刻理解了我们品牌的精神内核，更以超乎预期的创造力将其转化为令人惊叹的空间体验。酒店开业后客户满意度持续领先，这离不开他们在设计阶段的精准把控与全程投入。',
-                author: '陈志远',
-                role: '璞隐酒店集团 · 首席执行官'
-            }, {
-                text: '与澜舍合作的竹韵山居项目，他们真正做到了将在地文化与现代舒适完美融合。每一位入住的客人都被空间中的细节打动，这正是我们想要的效果——有温度的奢华。',
-                author: '林婉清',
-                role: '安吉竹韵文旅 · 创始人'
-            }, {
-                text: '作为国际品牌，我们需要一个既理解全球标准又深谙本土审美的设计伙伴。澜舍在东京银座项目中展现出的专业水准和跨文化沟通能力，令我们印象深刻。',
-                author: '田中裕介',
-                role: '千禧酒店集团 · 亚太区总裁'
-            }];
-            let currentTestimonial = 0;
-            let testimonialInterval;
-
-            // --- Navbar Scroll Effect ---
             function updateNavbar() {
                 if (window.scrollY > 60) {
                     navbar.classList.add('scrolled');
                 } else {
                     navbar.classList.remove('scrolled');
                 }
-
-                // Update active nav link based on scroll position
                 const sections = document.querySelectorAll('section[id]');
                 let scrollPos = window.scrollY + 120;
                 sections.forEach(section => {
@@ -1382,14 +1140,12 @@
             }
             window.addEventListener('scroll', updateNavbar, { passive: true });
 
-            // --- Mobile Menu ---
             function openMobileMenu() {
                 mobileMenu.classList.add('open');
                 mobileOverlay.classList.add('show');
                 hamburger.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
-
             function closeMobileMenu() {
                 mobileMenu.classList.remove('open');
                 mobileOverlay.classList.remove('show');
@@ -1410,55 +1166,6 @@
                 });
             });
 
-            // --- Testimonials ---
-            function showTestimonial(index) {
-                const t = testimonials[index];
-                testimonialText.style.opacity = '0';
-                testimonialAuthor.style.opacity = '0';
-                testimonialRole.style.opacity = '0';
-                setTimeout(() => {
-                    testimonialText.textContent = t.text;
-                    testimonialAuthor.textContent = t.author;
-                    testimonialRole.textContent = t.role;
-                    testimonialText.style.opacity = '1';
-                    testimonialAuthor.style.opacity = '1';
-                    testimonialRole.style.opacity = '1';
-                }, 300);
-                testimonialText.style.transition = 'opacity 0.35s ease';
-                testimonialAuthor.style.transition = 'opacity 0.35s ease';
-                testimonialRole.style.transition = 'opacity 0.35s ease';
-
-                // Update dots
-                const dots = testimonialDots.querySelectorAll('.testimonial-dot');
-                dots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === index);
-                });
-                currentTestimonial = index;
-            }
-
-            function nextTestimonial() {
-                const next = (currentTestimonial + 1) % testimonials.length;
-                showTestimonial(next);
-            }
-
-            function startTestimonialAutoplay() {
-                testimonialInterval = setInterval(nextTestimonial, 5000);
-            }
-
-            function resetTestimonialAutoplay() {
-                clearInterval(testimonialInterval);
-                startTestimonialAutoplay();
-            }
-            testimonialDots.addEventListener('click', (e) => {
-                if (e.target.classList.contains('testimonial-dot')) {
-                    const index = parseInt(e.target.getAttribute('data-index'));
-                    showTestimonial(index);
-                    resetTestimonialAutoplay();
-                }
-            });
-            startTestimonialAutoplay();
-
-            // --- Smooth scroll for all anchor links ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     const targetId = this.getAttribute('href');
@@ -1467,14 +1174,12 @@
                     if (target) {
                         e.preventDefault();
                         const offset = navbar.offsetHeight + 16;
-                        const top = target.getBoundingClientRect().top + window.pageYOffset -
-                            offset;
+                        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
                         window.scrollTo({ top, behavior: 'smooth' });
                     }
                 });
             });
 
-            // --- Intersection Observer for fade-in animations ---
             const observerOptions = {
                 threshold: 0.15,
                 rootMargin: '0px 0px -40px 0px'
@@ -1489,7 +1194,7 @@
                 });
             }, observerOptions);
             document.querySelectorAll(
-                '.service-card, .project-card, .process-step, .about-image-wrapper, .about-content'
+                '.service-card, .project-card, .about-image-wrapper, .about-content'
             ).forEach(el => {
                 el.style.opacity = '0';
                 el.style.transform = 'translateY(30px)';
@@ -1497,11 +1202,10 @@
                 observer.observe(el);
             });
 
-            // --- Initial call ---
             updateNavbar();
 
-            console.log('🏨 澜舍酒店设计顾问官网已就绪');
-            console.log('   LANSHE Hospitality Design — Ready');
+            console.log('🏨 骊泊设计顾问官网已就绪');
+            console.log('   LINSPIRE Hospitality Design — Ready');
         })();
     </script>
 </body>

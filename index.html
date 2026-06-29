@@ -23,6 +23,13 @@
     <meta name="twitter:title" content="LINSPIRE 骊泊设计" />
     <meta name="twitter:description" content="国际金奖设计团队，专注高端酒店与文旅全案设计。" />
 
+    <!-- ===== Favicon（统一放在 /favicon/ 文件夹） ===== -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
     <!-- ===== 性能优化：预连接 ===== -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
@@ -1407,7 +1414,7 @@
                         <div class="location">企业总部标杆</div>
                     </div>
                 </div>
-                <!-- 10. 广西农信金融广场（移至此处，紧挨长隆集团总部） -->
+                <!-- 10. 广西农信金融广场 -->
                 <div class="case-card reveal reveal-delay-1" data-index="9">
                     <div class="case-image">
                         <img src="images/NX.jpg" alt="广西农信金融广场" loading="lazy" />
@@ -1533,7 +1540,7 @@
         (function() {
             'use strict';
 
-            // ===== 案例图片数据（新顺序） =====
+            // ===== 案例图片数据 =====
             const caseImages = [
                 // 0: 上海世茂深坑洲际酒店
                 [
@@ -1612,7 +1619,7 @@
                     'images/CL4.jpg',
                     'images/CL5.jpg'
                 ],
-                // 9: 广西农信金融广场（新位置）
+                // 9: 广西农信金融广场
                 [
                     'images/NX.jpg',
                     'images/NX2.jpg',
@@ -1632,7 +1639,7 @@
                 ]
             ];
 
-            // ===== 案例标题和副标题（与新顺序对齐） =====
+            // ===== 案例标题和副标题 =====
             const caseMeta = [
                 { title: '上海世茂深坑洲际酒店', sub: '世界首个深坑生态酒店 · 上海佘山' },
                 { title: '科莫鹦鹉岛酒店', sub: 'COMO Parrot Cay · 加勒比私人岛屿' },
@@ -1668,7 +1675,6 @@
                 img.addEventListener('contextmenu', (e) => e.preventDefault());
                 img.addEventListener('dragstart', (e) => e.preventDefault());
                 img.addEventListener('copy', (e) => e.preventDefault());
-                // 移动端长按禁止（通过CSS touch-action已实现）
             }
 
             // ===== 打开模态框 =====
@@ -1688,7 +1694,6 @@
                 modalOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
 
-                // 对模态框内所有图片进行保护
                 setTimeout(() => {
                     document.querySelectorAll('.modal-carousel .slide img').forEach(protectImage);
                 }, 50);
@@ -1710,7 +1715,7 @@
                     const img = document.createElement('img');
                     img.src = src;
                     img.alt = `图片 ${idx+1}`;
-                    protectImage(img); // 创建时即保护
+                    protectImage(img);
                     slide.appendChild(img);
                     slidesWrapper.appendChild(slide);
                 });
@@ -1864,7 +1869,7 @@
                 });
             });
 
-            // ===== 页面加载后，对所有图片进行保护（包括已存在的） =====
+            // ===== 页面加载后保护所有图片 =====
             document.addEventListener('DOMContentLoaded', function() {
                 document.querySelectorAll('.case-image img, .modal-carousel .slide img').forEach(protectImage);
             });

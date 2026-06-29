@@ -1077,6 +1077,54 @@
                 max-height: 40vh;
             }
         }
+
+        /* ===== 图片防下载 ===== */
+        .case-image img,
+        .modal-carousel .slide img {
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-user-drag: none;
+            user-drag: none;
+            touch-action: none;
+        }
+
+        /* 模态框图片水印 */
+        .modal-carousel .slide {
+            position: relative;
+        }
+        .modal-carousel .slide::after {
+            content: 'LINSPIRE © 2026';
+            position: absolute;
+            bottom: 20px;
+            right: 24px;
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.15);
+            letter-spacing: 2px;
+            font-weight: 300;
+            pointer-events: none;
+            font-family: var(--font-serif);
+            text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+            z-index: 3;
+        }
+
+        /* 卡片缩略图水印 */
+        .case-image {
+            position: relative;
+        }
+        .case-image::after {
+            content: 'LINSPIRE';
+            position: absolute;
+            bottom: 48px;
+            right: 16px;
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.08);
+            letter-spacing: 1.5px;
+            pointer-events: none;
+            font-family: var(--font-serif);
+            z-index: 2;
+        }
     </style>
 </head>
 <body>
@@ -1613,6 +1661,16 @@
             let currentSlide = 0;
             let images = [];
 
+            // ===== 防下载：阻止右键、拖拽、复制 =====
+            function protectImage(img) {
+                if (!img) return;
+                img.draggable = false;
+                img.addEventListener('contextmenu', (e) => e.preventDefault());
+                img.addEventListener('dragstart', (e) => e.preventDefault());
+                img.addEventListener('copy', (e) => e.preventDefault());
+                // 移动端长按禁止（通过CSS touch-action已实现）
+            }
+
             // ===== 打开模态框 =====
             function openModal(index) {
                 currentIndex = index;
@@ -1629,6 +1687,11 @@
 
                 modalOverlay.classList.add('active');
                 document.body.style.overflow = 'hidden';
+
+                // 对模态框内所有图片进行保护
+                setTimeout(() => {
+                    document.querySelectorAll('.modal-carousel .slide img').forEach(protectImage);
+                }, 50);
             }
 
             // ===== 关闭模态框 =====
@@ -1647,6 +1710,7 @@
                     const img = document.createElement('img');
                     img.src = src;
                     img.alt = `图片 ${idx+1}`;
+                    protectImage(img); // 创建时即保护
                     slide.appendChild(img);
                     slidesWrapper.appendChild(slide);
                 });
@@ -1798,6 +1862,11 @@
                         window.scrollTo({ top: top, behavior: 'smooth' });
                     }
                 });
+            });
+
+            // ===== 页面加载后，对所有图片进行保护（包括已存在的） =====
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('.case-image img, .modal-carousel .slide img').forEach(protectImage);
             });
 
         })();
